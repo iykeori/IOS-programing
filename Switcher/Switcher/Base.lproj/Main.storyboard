@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Switching View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SwitchingViewController" customModule="Switcher" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NwM-ha-7CY">
+                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="HzO-PD-zCN"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Switch View" id="EQ2-Cw-Mt8">
+                                        <connections>
+                                            <action selector="switchViewsWithSender:" destination="BYZ-38-t0r" id="3Jv-Lh-YRc"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="NwM-ha-7CY" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Azd-R9-7Da"/>
+                            <constraint firstItem="NwM-ha-7CY" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="UeC-5X-ZSW"/>
+                            <constraint firstItem="NwM-ha-7CY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="arV-iT-EvR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="139"/>
+        </scene>
+        <!--Yellow View Controller-->
+        <scene sceneID="I3i-W3-ovf">
+            <objects>
+                <viewController storyboardIdentifier="Yellow" id="Hs7-te-6BH" customClass="YellowViewController" customModule="Switcher" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3JM-Py-GOS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zCX-pa-504">
+                                <rect key="frame" x="132" y="433" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="BvE-n9-TMo"/>
+                                    <constraint firstAttribute="height" constant="30" id="kPz-U9-Lxu"/>
+                                </constraints>
+                                <state key="normal" title="Press Me">
+                                    <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onButtonPressed:" destination="Hs7-te-6BH" eventType="touchUpInside" id="S29-eG-wyN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zCX-pa-504" firstAttribute="leading" secondItem="Lrb-JV-otL" secondAttribute="leading" constant="132" id="Asn-jc-xbg"/>
+                            <constraint firstItem="Lrb-JV-otL" firstAttribute="trailing" secondItem="zCX-pa-504" secondAttribute="trailing" constant="132" id="H1p-KJ-C0i"/>
+                            <constraint firstItem="zCX-pa-504" firstAttribute="top" secondItem="Lrb-JV-otL" secondAttribute="top" constant="389" id="WvV-fD-36m"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Lrb-JV-otL"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="375-wS-QbE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1089.8550724637682" y="287.94642857142856"/>
+        </scene>
+        <!--Blue View Controller-->
+        <scene sceneID="G7g-1A-SCM">
+            <objects>
+                <viewController storyboardIdentifier="Blue" id="8Pi-nf-p2n" customClass="BlueViewController" customModule="Switcher" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Tb-ge-QDG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MfO-Mb-1w9">
+                                <rect key="frame" x="132" y="433" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="94G-AZ-wLN"/>
+                                    <constraint firstAttribute="height" constant="30" id="Msy-NX-uVB"/>
+                                </constraints>
+                                <state key="normal" title="Press Me">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="onButtonPressed:" destination="8Pi-nf-p2n" eventType="touchUpInside" id="f7v-mK-Nnq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EB9-ZV-cs6" firstAttribute="trailing" secondItem="MfO-Mb-1w9" secondAttribute="trailing" constant="132" id="Se7-ec-YEo"/>
+                            <constraint firstItem="MfO-Mb-1w9" firstAttribute="top" secondItem="EB9-ZV-cs6" secondAttribute="top" constant="389" id="vC7-WV-Gcp"/>
+                            <constraint firstItem="MfO-Mb-1w9" firstAttribute="leading" secondItem="EB9-ZV-cs6" secondAttribute="leading" constant="132" id="x9B-pJ-vH1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EB9-ZV-cs6"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U8Q-Cr-b8k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1060.8695652173915" y="-497.54464285714283"/>
+        </scene>
+    </scenes>
+</document>
